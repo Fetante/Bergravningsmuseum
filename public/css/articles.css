@@ -1,0 +1,16 @@
+.article-h2 {
+  margin-bottom: 0px;
+}
+
+.articles-a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #191919;
+  font-weight: 600;
+}
+
+.author {  
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

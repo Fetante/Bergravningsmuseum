@@ -1,0 +1,33 @@
+/** two_column_layout.css */
+
+.two-col-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.two-col-layout > .main {
+    width: calc(100% / 16 * 12); /* 12/16 width */
+}
+
+.two-col-layout > .aside {
+    width: calc(100% / 16 * 4); /* 4/16 width */
+}
+
+@media (max-width: 768px) {
+    .two-col-layout {
+        flex-direction: column; /* Ändra layout till kolumner vid mindre skärmstorlekar */
+        align-items: center; /* Centrera element vertikalt */
+    }
+
+    .two-col-layout > .main, .two-col-layout > .aside {
+        width: 100%; /* Ändra bredden till 100% för att passa kolumnerna i responsivt läge */
+    }
+
+    .two-col-layout > .aside {
+        order: -1; /* Placera aside ovanför main när flex-riktningen är kolumn */
+        text-align: center;        
+    }
+}

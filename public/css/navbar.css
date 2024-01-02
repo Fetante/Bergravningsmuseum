@@ -1,0 +1,87 @@
+/* navbar.css */
+
+#hamitems .active a {    
+    color: #ffffff;
+}
+
+#hamitems a {
+    color: #191919;
+    font-weight: bold;
+}
+#hamitems ul >li{
+    display: inline;
+}
+
+/* Big Screen*/
+#hamnav {
+    width: 100%;
+    background-color: rgba(149,115,56,255);
+    padding: 10px;
+    
+}
+
+/* Hide hamburger*/
+#hamnav label, 
+#hamburger {
+    display: none;
+}
+
+#hamitems ul {
+    display: flex;
+    padding: 30px;  
+}
+
+#hamitems ul > li{
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#hamitems a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+#hamitems a:hover {
+    color: #b3b6b2;
+}
+
+/*Small Screen*/
+
+@media screen and (max-width: 770px) {
+    /*Change to vertical menu*/
+    #hamitems ul {
+        display: block;
+    }
+
+    #hamitems a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid #333;        
+    }
+
+    #hamnav label {
+        display: inline-block;
+        color: #fff;
+        background: #420f0f;
+        font-size: 1.2em;
+        font-style: normal;
+        padding: 10px;
+    }
+
+    #hamitems {
+        display: none;
+    }
+
+    #hamnav input:checked ~ #hamitems {
+        display: block;
+    }
+
+    #hamnav {
+        position: fixed; /* Lägg till position: fixed */
+        top: 0;
+        z-index: 1000;
+    }
+   
+}

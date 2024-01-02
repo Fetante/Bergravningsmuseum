@@ -1,0 +1,23 @@
+h1 {
+    margin: 30px auto;
+    text-align: center; /* För att säkerställa horisontell centrering */
+  }
+
+.objects {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    row-gap: 30px;
+  }
+  
+  .objects-object {
+    text-align: center;
+  }
+
+
+@media (min-width: 600px) {
+  .objects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
